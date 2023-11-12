@@ -13,7 +13,6 @@ class DatVe extends Component {
             <BiSolidTv />
           </span>
         </header>
-
         <div className="section-ghe">
           <div className="gheNumber">
             <table>
@@ -24,7 +23,11 @@ class DatVe extends Component {
                       return (
                         <th key={index}>
                           {item.danhSachGhe.map((ghe) => {
-                            return <span className="soGhe" key={ghe.soGhe}>{ghe.soGhe}</span>;
+                            return (
+                              <span className="soGhe" key={ghe.soGhe}>
+                                {ghe.soGhe}
+                              </span>
+                            );
                           })}
                         </th>
                       );
@@ -32,10 +35,27 @@ class DatVe extends Component {
                   })}
                 </tr>
               </thead>
+              <tbody>
+                {[...Array(12)].map((_, rowIndex) => (
+                  <tr key={rowIndex}>
+                    {this.props.danhSachGheArr.map((item, index) => {
+                      if (item.hang === "") {
+                        const rowSeats = item.danhSachGhe.map((ghe) => (
+                          <span className="soGhe" key={ghe.soGhe}>
+                            {ghe.soGhe}
+                          </span>
+                        ));
+
+                        return <td key={index}>{rowSeats}</td>;
+                      }
+
+                      return null; // Or any other fallback JSX if the condition is not met
+                    })}
+                  </tr>
+                ))}
+              </tbody>
             </table>
           </div>
-          <div className="ghe"></div>
-          <div className="thuTuGhe"></div>
         </div>
       </div>
     );
