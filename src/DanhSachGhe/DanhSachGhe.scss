@@ -1,0 +1,24 @@
+.background_container {
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-position: bottom;
+  position: relative;
+  font-family: fontForAll;
+  // opacity: 0.5; 
+  &::before {
+    content: "";
+    position: absolute;
+    background-color: black;
+    height: 100vh;
+    width: 100%;
+    opacity: 0.6;
+  }
+
+  .section_process {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+

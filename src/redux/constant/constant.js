@@ -1,0 +1,1 @@
+export const chonGhe = "CHON_GHE";

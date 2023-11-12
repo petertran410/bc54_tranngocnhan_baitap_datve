@@ -1,6 +1,6 @@
-let data = [
+export let danhSachGhe = [
   {
-    hang: "",
+    hang: "RONG",
     danhSachGhe: [
       { soGhe: "1", gia: 0 },
       { soGhe: "2", gia: 0 },
@@ -29,8 +29,8 @@ let data = [
       { soGhe: "A8", gia: 75000, daDat: false },
       { soGhe: "A9", gia: 75000, daDat: false },
       { soGhe: "A10", gia: 75000, daDat: false },
-      { soGhe: "A11", gia: 0, daDat: true },
-      { soGhe: "A12", gia: 0, daDat: true },
+      { soGhe: "A11", gia: 75000, daDat: true },
+      { soGhe: "A12", gia: 75000, daDat: true },
     ],
   },
   {
