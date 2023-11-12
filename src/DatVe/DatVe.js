@@ -13,6 +13,30 @@ class DatVe extends Component {
             <BiSolidTv />
           </span>
         </header>
+
+        <div className="section-ghe">
+          <div className="gheNumber">
+            <table>
+              <thead>
+                <tr>
+                  {this.props.danhSachGheArr.map((item, index) => {
+                    if (item.hang === "") {
+                      return (
+                        <th key={index}>
+                          {item.danhSachGhe.map((ghe) => {
+                            return <span className="soGhe" key={ghe.soGhe}>{ghe.soGhe}</span>;
+                          })}
+                        </th>
+                      );
+                    }
+                  })}
+                </tr>
+              </thead>
+            </table>
+          </div>
+          <div className="ghe"></div>
+          <div className="thuTuGhe"></div>
+        </div>
       </div>
     );
   }
@@ -20,7 +44,7 @@ class DatVe extends Component {
 
 let mapToStateProps = (state) => {
   return {
-    danhSachGhe: state.danhSachGhe,
+    danhSachGheArr: state.danhSachGheArr,
   };
 };
 

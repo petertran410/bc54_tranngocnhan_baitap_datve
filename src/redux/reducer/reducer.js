@@ -1,8 +1,8 @@
-import { danhSachGhe } from "../../data/data";
+import { danhSachGheArr } from "../../data/data";
 
 let initialState = {
-  danhSachGhe: danhSachGhe,
-  detail: danhSachGhe[0],
+  danhSachGheArr: danhSachGheArr,
+  detail: danhSachGheArr[0],
   chonGhe: [],
 };
 

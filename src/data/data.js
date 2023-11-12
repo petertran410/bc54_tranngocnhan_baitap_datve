@@ -1,6 +1,6 @@
-export let danhSachGhe = [
+export let danhSachGheArr = [
   {
-    hang: "RONG",
+    hang: "",
     danhSachGhe: [
       { soGhe: "1", gia: 0 },
       { soGhe: "2", gia: 0 },

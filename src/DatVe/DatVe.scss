@@ -1,3 +1,13 @@
 .datVe {
   color: white;
+
+  .section-ghe {
+    .gheNumber {
+      .soGhe {
+        &:nth-child(n - 1) {
+          margin-right: 20px;
+        }
+      }
+    }
+  }
 }
