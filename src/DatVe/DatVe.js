@@ -38,13 +38,15 @@ class DatVe extends Component {
               <tbody className="d-flex">
                 <div className="chuHangGhe">
                   {this.props.danhSachGheArr.map((item, index) => {
-                    return (
-                      <tr key={index}>
-                        <td>
-                          <span>{item.hang}</span>
-                        </td>
-                      </tr>
-                    );
+                    if (item.hang !== "") {
+                      return (
+                        <tr key={index}>
+                          <td>
+                            <span>{item.hang}</span>
+                          </td>
+                        </tr>
+                      );
+                    }
                   })}
                 </div>
                 <div className="soHangGhe">
