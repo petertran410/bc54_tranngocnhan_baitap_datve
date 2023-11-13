@@ -35,24 +35,37 @@ class DatVe extends Component {
                   })}
                 </tr>
               </thead>
-              <tbody>
-                {[...Array(12)].map((_, rowIndex) => (
-                  <tr key={rowIndex}>
-                    {this.props.danhSachGheArr.map((item, index) => {
-                      if (item.hang === "") {
-                        const rowSeats = item.danhSachGhe.map((ghe) => (
-                          <span className="soGhe" key={ghe.soGhe}>
-                            {ghe.soGhe}
-                          </span>
-                        ));
+              <tbody className="d-flex">
+                <div className="chuHangGhe">
+                  {this.props.danhSachGheArr.map((item, index) => {
+                    return (
+                      <tr key={index}>
+                        <td>
+                          <span>{item.hang}</span>
+                        </td>
+                      </tr>
+                    );
+                  })}
+                </div>
+                <div className="soHangGhe">
+                  {[...Array(10)].map((_, rowIndex) => (
+                    <tr key={rowIndex}>
+                      {this.props.danhSachGheArr.map((item, index) => {
+                        if (item.hang === "") {
+                          const rowSeats = item.danhSachGhe.map((ghe) => (
+                            <span className="soGhe" key={ghe.soGhe}>
+                              {ghe.soGhe}
+                            </span>
+                          ));
 
-                        return <td key={index}>{rowSeats}</td>;
-                      }
+                          return <td key={index}>{rowSeats}</td>;
+                        }
 
-                      return null; // Or any other fallback JSX if the condition is not met
-                    })}
-                  </tr>
-                ))}
+                        return null;
+                      })}
+                    </tr>
+                  ))}
+                </div>
               </tbody>
             </table>
           </div>

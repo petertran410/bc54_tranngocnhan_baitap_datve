@@ -3,17 +3,33 @@
 
   .section-ghe {
     .gheNumber {
-      padding-left: 45px;
-      .soGhe {
-        &:nth-child(n - 1) {
-          margin-right: 20px;
+      font-size: 25px;
+
+      thead {
+        th {
+          padding-left: 15px;
+          padding-bottom: 15px;
+          color: yellow;
+          .soGhe {
+            margin-left: 25px;
+          }
         }
       }
 
-      tr {
-        &:nth-child(2) {
-          display: flex;
-          flex-direction: column;
+      tbody {
+        .chuHangGhe {
+          td {
+            padding-bottom: 10px;
+          }
+        }
+
+        .soHangGhe {
+          td {
+            padding-bottom: 10px;
+          }
+          .soGhe {
+            margin-left: 25px;
+          }
         }
       }
     }
